@@ -1664,8 +1664,7 @@
     === RUN   TestSum
     --- PASS: TestSum (0.00s)
     PASS
-    ok   github.com/go-design-patterns/introduction/ex_xx_testing
-    0.001s
+    ok   github.com/go-design-patterns/introduction/ex_xx_testing 0.001s
   < srci..
 
   Our tests were correct. Let's see what happens if we break things on
@@ -1674,8 +1673,7 @@
   ..srci > sh
     > go test
     --- FAIL: TestSum (0.00s)
-        main_test.go:12: Our sum function doens't work, 5+6 isn't
-    10
+        main_test.go:12: Our sum function doens't work, 5+6 isn't 10
     FAIL
     exit status 1
     FAIL  github.com/sayden/go-design-patterns/introduction/ex_xx_testing 0.002s
@@ -2020,7 +2018,7 @@
   < src..
 
   ..srci > sh
-    > "pack"
+    "pack"
   < srci..
 
   First, we have defined a variable called @c(packt) to hold the contents of the
@@ -2076,7 +2074,7 @@
     }
   < src..
 
-  ..srci >
+  ..srci > sh
     {"number":5,"string":"Packt"}
   < srci..
 
@@ -2564,12 +2562,9 @@
     > go test -v .
     === RUN   TestGetInstance
     --- FAIL: TestGetInstance (0.00s)
-            singleton_test.go:9: expected pointer to Singleton
-    after calling GetInstance(), not nil
-            singleton_test.go:15: After calling for the first time
-    to count, the count must be 1 but it is 0
-            singleton_test.go:27: After calling 'AddOne' using the
-    second counter, the current count must be 2 but was 0
+            singleton_test.go:9: expected pointer to Singleton after calling GetInstance(), not nil
+            singleton_test.go:15: After calling for the first time to count, the count must be 1 but it is 0
+            singleton_test.go:27: After calling 'AddOne' using the second counter, the current count must be 2 but was 0
     FAIL
     exit status 1
     FAIL
@@ -2880,12 +2875,9 @@
     > go test -v -run=TestBuilder .
     === RUN   TestBuilderPattern
     --- FAIL: TestBuilderPattern (0.00s)
-            builder_test.go:15: Wheels on a car must be 4 and they
-    were 0
-            builder_test.go:19: Structure on a car must be 'Car'
-    and was
-            builder_test.go:23: Seats on a car must be 5 and they
-    were 0
+            builder_test.go:15: Wheels on a car must be 4 and they were 0
+            builder_test.go:19: Structure on a car must be 'Car' and was
+            builder_test.go:23: Seats on a car must be 5 and they were 0
     FAIL
   < srci..
 
@@ -2930,16 +2922,11 @@
     > go test -v -run=Builder .
     === RUN   TestBuilderPattern
     --- FAIL: TestBuilderPattern (0.00s)
-            builder_test.go:15: Wheels on a car must be 4 and they
-    were 0
-            builder_test.go:19: Structure on a car must be 'Car'
-    and was
-            builder_test.go:23: Seats on a car must be 5 and they
-    were 0
-            builder_test.go:35: Wheels on a motorbike must be 2 and
-    they were 0
-            builder_test.go:39: Structure on a motorbike must be
-    'Motorbike' and was
+            builder_test.go:15: Wheels on a car must be 4 and they were 0
+            builder_test.go:19: Structure on a car must be 'Car' and was
+            builder_test.go:23: Seats on a car must be 5 and they were 0
+            builder_test.go:35: Wheels on a motorbike must be 2 and they were 0
+            builder_test.go:39: Structure on a motorbike must be 'Motorbike' and was
     FAIL
   < srci..
 
@@ -3316,12 +3303,10 @@
     > go test -v -run=GetPaymentMethod .
     === RUN   TestGetPaymentMethodCash
     --- FAIL: TestGetPaymentMethodCash (0.00s)
-            factory_test.go:11: A payment method of type 'Cash'
-    must exist
+            factory_test.go:11: A payment method of type 'Cash' must exist
     === RUN   TestGetPaymentMethodDebitCard
     --- FAIL: TestGetPaymentMethodDebitCard (0.00s)
-            factory_test.go:24: A payment method of type
-    'DebitCard' must exist
+            factory_test.go:24: A payment method of type 'DebitCard' must exist
     === RUN   TestGetPaymentMethodNonExistent
     --- PASS: TestGetPaymentMethodNonExistent (0.00s)
             factory_test.go:38: LOG: Not implemented yet
@@ -3381,18 +3366,15 @@
     > go test -v -run=GetPaymentMethod .
     === RUN   TestGetPaymentMethodCash
     --- FAIL: TestGetPaymentMethodCash (0.00s)
-            factory_test.go:16: The cash payment method message
-    wasn't correct
+            factory_test.go:16: The cash payment method message wasn't correct
             factory_test.go:18: LOG:
     === RUN   TestGetPaymentMethodDebitCard
     --- FAIL: TestGetPaymentMethodDebitCard (0.00s)
-            factory_test.go:28: The debit card payment method
-    message wasn't correct
+            factory_test.go:28: The debit card payment method message wasn't correct
             factory_test.go:30: LOG:
     === RUN   TestGetPaymentMethodNonExistent
     --- PASS: TestGetPaymentMethodNonExistent (0.00s)
-            factory_test.go:38: LOG: Payment method 20 not
-    recognized
+            factory_test.go:38: LOG: Payment method 20 not recognized
     FAIL
     exit status 1
     FAIL
@@ -3430,8 +3412,7 @@
             factory_test.go:30: LOG: 22.30 paid using debit card
     === RUN   TestGetPaymentMethodNonExistent
     --- PASS: TestGetPaymentMethodNonExistent (0.00s)
-            factory_test.go:38: LOG: Payment method 20 not
-    recognized
+            factory_test.go:38: LOG: Payment method 20 not recognized
     PASS
     ok
   < srci..
@@ -3491,14 +3472,11 @@
             factory_test.go:18: LOG: 10.30 paid using cash
     === RUN   TestGetPaymentMethodDebitCard
     --- FAIL: TestGetPaymentMethodDebitCard (0.00s)
-            factory_test.go:28: The debit card payment method
-    message wasn't correct
-            factory_test.go:30: LOG: 22.30 paid using new debit
-    card implementation
+            factory_test.go:28: The debit card payment method message wasn't correct
+            factory_test.go:30: LOG: 22.30 paid using new debit card implementation
     === RUN   TestGetPaymentMethodNonExistent
     --- PASS: TestGetPaymentMethodNonExistent (0.00s)
-            factory_test.go:38: LOG: Payment method 20 not
-    recognized
+            factory_test.go:38: LOG: Payment method 20 not recognized
     FAIL
     exit status 1
     FAIL
@@ -3526,12 +3504,10 @@
             factory_test.go:18: LOG: 10.30 paid using cash
     === RUN   TestGetPaymentMethodDebitCard
     --- PASS: TestGetPaymentMethodDebitCard (0.00s)
-            factory_test.go:30: LOG: 22.30 paid using debit card
-    (new)
+            factory_test.go:30: LOG: 22.30 paid using debit card (new)
     === RUN   TestGetPaymentMethodNonExistent
     --- PASS: TestGetPaymentMethodNonExistent (0.00s)
-            factory_test.go:38: LOG: Payment method 20 not
-    recognized
+            factory_test.go:38: LOG: Payment method 20 not recognized
     PASS
     ok
   < srci..
@@ -3909,8 +3885,7 @@
     > go test -v -run=Factory .
     === RUN   TestMotorbikeFactory
     --- FAIL: TestMotorbikeFactory (0.00s)
-            vehicle_factory_test.go:8: Factory with id 2 not
-    recognized
+            vehicle_factory_test.go:8: Factory with id 2 not recognized
     === RUN   TestCarFactory
     --- FAIL: TestCarFactory (0.00s)
             vehicle_factory_test.go:28: Factory with id 1 not recognized
@@ -3951,8 +3926,7 @@
     > go test -v -run=Factory -cover .
     === RUN   TestMotorbikeFactory
     --- PASS: TestMotorbikeFactory (0.00s)
-            vehicle_factory_test.go:16: Motorbike vehicle has 2
-    wheels
+            vehicle_factory_test.go:16: Motorbike vehicle has 2 wheels
             vehicle_factory_test.go:22: Sport motorbike has type 1
     === RUN   TestCarFactory
     --- PASS: TestCarFactory (0.00s)
@@ -4293,12 +4267,9 @@
     > go test -run=TestClone -v .
     === RUN   TestClone
     --- PASS: TestClone (0.00s)
-    prototype_test.go:41: LOG: Shirt with SKU 'abbcc' and Color id
-    1 that costs 15.000000
-    prototype_test.go:42: LOG: Shirt with SKU 'empty' and Color id
-    1 that costs 15.000000
-    prototype_test.go:44: LOG: The memory positions of the shirts
-    are different 0xc42002c038 != 0xc42002c040
+            prototype_test.go:41: LOG: Shirt with SKU 'abbcc' and Color id 1 that costs 15.000000
+            prototype_test.go:42: LOG: Shirt with SKU 'empty' and Color id 1 that costs 15.000000
+            prototype_test.go:44: LOG: The memory positions of the shirts are different 0xc42002c038 != 0xc42002c040
 
     PASS
     ok
@@ -4693,8 +4664,7 @@
   will get the following error message:
 
   ..srci > sh
-    cannot use son (type Son) as type Parent in argument to
-    GetParentField
+    cannot use son (type Son) as type Parent in argument to GetParentField
   < srci..
 
   This, in fact, makes a lot of sense. What's the solution for this? Well, you
@@ -5305,8 +5275,7 @@
     > go test -v -run=TestPrintAPI1 .
     === RUN   TestPrintAPI1
     --- FAIL: TestPrintAPI1 (0.00s)
-            bridge_test.go:14: Error trying to use the API1
-    implementation: Message: Not implemented yet
+            bridge_test.go:14: Error trying to use the API1 implementation: Message: Not implemented yet
     FAIL
     exit status 1
     FAIL    _/C_/Users/mario/Desktop/go-design-patterns/structural/bridge/traditional
@@ -5415,13 +5384,9 @@
     bridge_test.go:39: Error message was not correct.
     Actual: Not implemented yet
     Expected: You need to pass an io.Writer to PrinterImpl2
-    bridge_test.go:52: Error trying to use the API2 implementation:
-    Not
-    implemented yet
-    bridge_test.go:57: API2 did not write correctly on the
-    io.Writer.
-    Actual:
-    Expected: Hello
+    bridge_test.go:52: Error trying to use the API2 implementation: Not implemented yet
+    bridge_test.go:57: API2 did not write correctly on the io.Writer.
+    Actual: Expected: Hello
     FAIL
     exit status 1
     FAIL
@@ -5518,8 +5483,7 @@
     --- FAIL: TestNormalPrinter_Print (0.00s)
         bridge_test.go:72: Not implemented yet
         bridge_test.go:85: Not implemented yet
-        bridge_test.go:89: The expected message on the io.Writer
-    doesn't match actual.
+        bridge_test.go:89: The expected message on the io.Writer doesn't match actual.
                  Actual:
                  Expected: Hello io.Writer
     FAIL
@@ -5602,8 +5566,7 @@
     --- FAIL: TestPacktPrinter_Print (0.00s)
         bridge_test.go:104: Not implemented yet
         bridge_test.go:117: Not implemented yet
-        bridge_test.go:121: The expected message on the io.Writer d
-    oesn't match actual.
+        bridge_test.go:121: The expected message on the io.Writer doesn't match actual.
             Actual:
             Expected: Message from Packt: Hello io.Writer
     FAIL
@@ -6435,8 +6398,7 @@
     === RUN   TestPizzaDecorator_AddIngredient
     --- FAIL: TestPizzaDecorator_AddIngredient (0.00s)
     decorator_test.go:29: Not implemented yet
-    decorator_test.go:34: When the the AddIngredient method of the
-    pizza decorator object is called, it must return the text
+    decorator_test.go:34: When the the AddIngredient method of the pizza decorator object is called, it must return the text
     Pizza with the following ingredients:
     FAIL
     exit status 1
@@ -6492,9 +6454,7 @@
     === RUN   TestOnion_AddIngredient
     --- FAIL: TestOnion_AddIngredient (0.00s)
     decorator_test.go:48: Not implemented yet
-    decorator_test.go:52: When calling the add ingredient of the
-    onion decorator it must return a text with the word 'onion',
-    not ''
+    decorator_test.go:52: When calling the add ingredient of the onion decorator it must return a text with the word 'onion', not ''
     FAIL
     exit status 1
     FAIL
@@ -6532,9 +6492,7 @@
     === RUN   TestMeat_AddIngredient
     --- FAIL: TestMeat_AddIngredient (0.00s)
     decorator_test.go:68: Not implemented yet
-    decorator_test.go:72: When calling the add ingredient of the
-    meat decorator it must return a text with the word 'meat', not
-    ''
+    decorator_test.go:72: When calling the add ingredient of the meat decorator it must return a text with the word 'meat', not ''
     FAIL
     exit status 1
     FAIL
@@ -6577,9 +6535,7 @@
     === RUN   TestPizzaDecorator_FullStack
     --- FAIL: TestPizzaDecorator_FullStack (0.
     decorator_test.go:80: Not implemented yet
-    decorator_test.go:87: When asking for a pizza with onion and
-    meat the returned string must contain the text 'Pizza with the
-    following ingredients: meat, onion' but '' didn't have it
+    decorator_test.go:87: When asking for a pizza with onion and meat the returned string must contain the text 'Pizza with the following ingredients: meat, onion' but '' didn't have it
     FAIL
     exit status 1
     FAIL
@@ -6687,8 +6643,7 @@
     > go test -v -run=TestPizzaDecorator_FullStack .
     === RUN   TestPizzaDecorator_FullStack
     --- PASS: TestPizzaDecorator_FullStack (0.00s)
-    decorator_test.go:92: Pizza with the following ingredients:
-    meat, onion,
+    decorator_test.go:92: Pizza with the following ingredients: meat, onion,
     PASS
     ok
   < srci..
@@ -7712,8 +7667,7 @@
     --- FAIL: TestTeamFlyweightFactory_GetTeam (0.00s)
     flyweight_test.go:11: The pointer to the TEAM_A was nil
     flyweight_test.go:21: The pointer to the TEAM_A was nil
-    flyweight_test.go:31: The number of objects created was not 1:
-    0
+    flyweight_test.go:31: The number of objects created was not 1: 0
     FAIL
     exit status 1
     FAIL
@@ -8882,8 +8836,7 @@
     === RUN   TestCreateDefaultChain
     === RUN   TestCreateDefaultChain/3_loggers,_2_of_them_writes_to_console,_second_only_if_it_founds_the_word_'hello',_third_writes_to_some_variable_if_second_found_'hello'
     --- FAIL: TestCreateDefaultChain (0.00s)
-    --- FAIL:
-    TestCreateDefaultChain/3_loggers,_2_of_them_writes_to_console,_second_only_if_it_founds_the_word_'hello',_third_writes_to_some_variable_if_second_found_'hello' (0.00s)
+    --- FAIL: TestCreateDefaultChain/3_loggers,_2_of_them_writes_to_console,_second_only_if_it_founds_the_word_'hello',_third_writes_to_some_variable_if_second_found_'hello' (0.00s)
             chain_test.go:33: Last message didn't received expected message
     FAIL
     exit status 1
